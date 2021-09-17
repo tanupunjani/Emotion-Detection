@@ -12,8 +12,7 @@ model_path = './Best_model_emotion.h5'
 
 
 def store_pred(text, pred, val):
-    db = firestore.Client.from_service_account_json(
-        'streamlit-store-firebase-adminsdk-9gtlx-9f79330f32.json')
+    db = firestore.Client.from_service_account_json(".streamlit/secrets.toml")
     data = {
         "pred": pred,
         "prediction_str": val,
