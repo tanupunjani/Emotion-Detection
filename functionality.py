@@ -2,7 +2,6 @@ import json
 from google.cloud import firestore
 from google.oauth2 import service_account
 import streamlit as st
-import numpy as np
 import tensorflow_text as text
 import tensorflow_hub as hub
 import tensorflow as tf

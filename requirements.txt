@@ -1,6 +1,5 @@
 streamlit==0.88.0
 tensorflow==2.5.1
-numpy==1.21.2
 tensorflow-text==2.6.0
 gdown==3.13.1
 google-cloud-firestore==2.3.2
