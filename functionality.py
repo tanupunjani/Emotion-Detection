@@ -1,4 +1,6 @@
+import json
 from google.cloud import firestore
+from google.oauth2 import service_account
 import streamlit as st
 import numpy as np
 import tensorflow_text as text
@@ -13,6 +15,10 @@ model_path = './Best_model_emotion.h5'
 
 def store_pred(text, pred, val):
     db = firestore.Client.from_service_account_json(".streamlit/secrets.toml")
+    key_dict = json.loads(st.secrets["textkey"])
+    creds = service_account.Credentials.from_service_account_info(key_dict)
+    db = firestore.Client(credentials=creds, project="streamlit-store")
+
     data = {
         "pred": pred,
         "prediction_str": val,
