@@ -52,7 +52,7 @@ def run_app():
     text_box_text = st.text_area("Enter text", """
     this is sample text 
     """)
-
+    store_pred(text=text_box_text, pred=0, val="not avail")
     model = load_model(model_path=model_path)
 
     prediction = model.predict([text_box_text])
