@@ -12,4 +12,4 @@ This problem aims to teach a computer to distinguish between positive and negati
 
 Preview of my app
 
-<img></img>
+<img src="https://github.com/tanupunjani/Emotion-Detection/blob/master/1_hqk2V7egQPJNbt0FPpqrsA%20(1).png"></img>
